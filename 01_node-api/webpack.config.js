@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const viz = require('webpack-visualizer-plugin')
 
 module.exports = {
     mode: 'development',
@@ -27,6 +28,7 @@ module.exports = {
             title: 'Webpack App',
             filename: 'index.html',
             template: 'src/template.html'
-        })
+        }),
+        viz.default
     ]
 };
